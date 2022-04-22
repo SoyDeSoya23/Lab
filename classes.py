@@ -21,9 +21,9 @@ class Television:
         Method that changes the on/off state of the Television.
         """
         if self.__status is False:
-            self.__status: bool = True
+            self.__status = True
         else:
-            self.__status: bool = False
+            self.__status = False
 
     def channel_up(self) -> None:
         """
@@ -35,7 +35,7 @@ class Television:
             if self.__channel < Television.MAX_CHANNEL:
                 self.__channel += 1
             else:
-                self.__channel: int = Television.MIN_CHANNEL
+                self.__channel = Television.MIN_CHANNEL
 
     def channel_down(self) -> None:
         """
@@ -47,7 +47,7 @@ class Television:
             if self.__channel > Television.MIN_CHANNEL:
                 self.__channel -= 1
             else:
-                self.__channel: int = Television.MAX_CHANNEL
+                self.__channel = Television.MAX_CHANNEL
 
     def volume_up(self) -> None:
         """
